@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 1140px;
+}
+.padding-site {
+  padding: 15px 40px;
+  margin-bottom: 10px;
+}
+.header {
+  background-color: #c9e7f1;
+}
+.task1,
+.task2,
+.task3 {
+  background-color: #d3ffc5;
+}
+.task1 .taskGrid,
+.task2 .taskGrid,
+.task3 .taskGrid {
+  display: grid;
+  grid-template-columns: 20% 10% 60%;
+  grid-column-gap: 10px;
+}
+.task1 .taskGrid p:nth-child(3n+4)::first-letter,
+.task2 .taskGrid p:nth-child(3n+4)::first-letter,
+.task3 .taskGrid p:nth-child(3n+4)::first-letter {
+  color: darkgray;
+}
+.task1 p,
+.task2 p,
+.task3 p {
+  margin: 5px 10px;
+}
+.task1 .headTable,
+.task2 .headTable,
+.task3 .headTable {
+  font-weight: 700;
+}
+.task2 {
+  background-color: #c8f0ff;
+}

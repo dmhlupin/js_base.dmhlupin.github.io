@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-   <script async defer type="text/javascript" src="script.js"></script>
-   <h1>Домашнее задание 1</h1>
-   <p>Задание 1: tempC = 20 градусов по цельсию </p> 
-   <p>Остальные задания ДЗ без вводных данных. Вывод в alertы</p>
-   <p>PS: async и defer применены к скрипту на данной странице.</p>
+
+    <div class="wrapper">
+        <header class="header padding-site">
+            <h1 class="header-heading">Домашняя работа &#35 2</h1>
+        </header>
+        <section class="task1 padding-site">
+            <h3>Задание 1</h3>
+            <div class="taskGrid">
+                <p class="headTable">Код</p>
+                <p class="headTable">Значение</p>
+                <p class="headTable">Объяснение</p>
+                <p>1 var a = 1, b = 1, c, d;</p>
+                <p></p>
+                <p></p>
+                <p>2 c = ++a; alert(c); </p>
+                <p>// 2</p>
+                <p>++a - увеличивает значение a на 1 перед тем как присвоить его c</p>
+                <p>3 d = b++; alert(d);</p>
+                <p>// 1</p>
+                <p>b++ - увеличивает значение b после операции присваивания его d</p>
+                <p>4 c = (2+ ++a); alert(c); </p>
+                <p>// 5</p>
+                <p>c = 5, так как сперва увеличивается на 1 переменная a (а она уже равна 2), затем происходит операция
+                    сложения (2 + 3)</p>
+                <p>5 d = (2+ b++); alert(d);</p>
+                <p>// 4</p>
+                <p> Переменная b на текущий момент равна 2. Сперва происходит операция сложения 2 + 2, затем b
+                    увеличивается на 1</p>
+                <p>6 alert(a)</p>
+                <p>// 3</p>
+                <p>a изначально равна 1 (строка 1), на строках 2 и 4 мы ее увеличиваем оба раза на 1 </p>
+                <p>7 alert(b)</p>
+                <p>// 3</p>
+                <p>b изначально равна 1 (строка 1), на строках 3 и 5 мы ее увеличиваем оба раза на 1 </p>
+
+            </div>
+        </section>
+        <section class="task2 padding-site">
+            <h3>Задание 2</h3>
+            <div class="taskGrid">
+                <p class="headTable">Код</p>
+                <p class="headTable">Значение</p>
+                <p class="headTable">Объяснение</p>
+                <p>1 var a = 2;</p>
+                <p></p>
+                <p></p>
+                <p>2 var x = 1 + (a *= 2);</p>
+                <p>// 5</p>
+                <p>Оператор a *= 2 эквивалентен a = a * 2, сперва выполняется операция в скобках, затем 1 + результат в
+                    скобках, т.е. 5</p>
+            </div>
+        </section>
+        <section class="task3 padding-site">
+            <h3>Задание 3</h3>
+            <p class="headTable">Объявить две целочисленные переменные a и b и задать им произвольные начальные
+                значения. Затем написать скрипт, который работает по следующему принципу:</p>
+            <p>если a и b положительные, вывести их разность;<br>
+                если а и b отрицательные, вывести их произведение;<br>
+                если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.</p>
+            <div class="runningSection">
+                <input class="inputField" id="digit1" type="text" placeholder="1е число">
+                <input class="inputField" id="digit2" type="text" placeholder="2е число">
+                <button class="calcButton" id="button1">Рассчитать</button>
+                <div class="result" ><p id = "result1"></p></div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+
 </body>
+
 </html>
