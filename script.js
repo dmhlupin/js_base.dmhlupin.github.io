@@ -1,3 +1,5 @@
+"use strict"
+
 // Task 3
 
 const button1 = document.getElementById("button1");
