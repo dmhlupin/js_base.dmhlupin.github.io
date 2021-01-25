@@ -14,7 +14,7 @@ function calcTwoDigits() {
     if (a >= 0 && b >= 0) {
         result = a - b;
         resString = "a и b положительны. Вычитаем: a - b = " + result;
-    } else if (a <= 0 && b <= 0) {
+    } else if (a < 0 && b < 0) {
         result = a * b;
         resString = "a и b отрицательны. Перемножаем: a * b = " + result;
     } else {
