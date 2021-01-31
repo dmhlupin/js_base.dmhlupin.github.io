@@ -1,7 +1,8 @@
 "use strict"
 
-// Task 2
+// Task 1
 
+console.log ('===== Задание 1 =======');
 
 //  =========  Простое решение с выводом в консоль ==============
 
@@ -69,6 +70,8 @@ console.log(arrayOfComposite);
 
 // task 2
 
+console.log ('===== Задание 2 =======');
+
 // Для товаров в корзине нам будет нужен двумерный массив
 // Каждый элемент в массиве корзины это один товар
 // Каждый товар - это массив из трех элементов:
@@ -114,6 +117,24 @@ addToCart(['Юбка', 30, 4]);
 console.log(cart);
 console.log(countBasketPrice(cart));
 
+// Task 3
+console.log ('===== Задание 3 =======');
+for(let i = 0; i < 10; console.log(i++)){};
 
 // Task 4
 
+console.log ('===== Задание 4 =======');
+// Заполним массив
+
+const arr4 = [];
+for (let i = 0; i < 20; i++) {
+    arr4.push('x');
+}
+console.log(arr4);
+
+// Выведем пирамидоу в консоль с помощью свертки
+
+arr4.reduce((sum, current) => {
+            console.log(sum);
+            return(sum + ' ' + current);
+            }, arr4[0]);
