@@ -47,7 +47,7 @@ function isSimple(num) {
 }
 
 function getNumbers(numStart, numEnd) {
-    
+
     while (numStart <= numEnd) {
         const arrOfDivs = isSimple(numStart);
         if (arrOfDivs.length <= 2) {
@@ -60,7 +60,7 @@ function getNumbers(numStart, numEnd) {
     return true;
 }
 
-getNumbers(0,100);
+getNumbers(0, 100);
 console.log('Массив простых чисел: ');
 console.log(arrayOfSimple);
 console.log('Массив составных чисел: ');
@@ -68,4 +68,52 @@ console.log(arrayOfComposite);
 
 
 // task 2
+
+// Для товаров в корзине нам будет нужен двумерный массив
+// Каждый элемент в массиве корзины это один товар
+// Каждый товар - это массив из трех элементов:
+// 0 - Название товара; 1 - стоимость единицы; 2 - количество данного товара
+// Реализуем также функцию добавления элемента товара в корзину с проверкой - есть ли он там
+
+const cart = [];
+
+
+function addToCart(product) {
+    if (!cart.length) cart.push(product);
+    else {
+        let isProductInCart = false;
+        cart.forEach((value) => {
+            if (value[0] === product[0]) {
+                value[2] += product[2];
+                isProductInCart = true;
+                return;
+            }
+        });
+        if (!isProductInCart) cart.push(product);
+        return;
+    }
+}
+
+function countBasketPrice(cart) {
+    let result = 0;
+    if (!cart.length) return "Ваша корзина пуста";
+    else {
+        cart.forEach((value) => {
+            result += (value[1] * value[2]);
+        });
+        return result;
+    }
+}
+
+console.log(countBasketPrice(cart));
+
+addToCart(['носки', 10, 1]);
+addToCart(['носки', 10, 3]);
+addToCart(['Рубашка', 50, 2]);
+addToCart(['Юбка', 30, 4]);
+console.log(cart);
+console.log(countBasketPrice(cart));
+
+
+// Task 4
 
