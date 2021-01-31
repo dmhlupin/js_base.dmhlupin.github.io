@@ -1,5 +1,8 @@
 "use strict"
 
+// Task 2
+
+
 //  =========  Простое решение с выводом в консоль ==============
 
 // function isSimple (num) {
@@ -62,3 +65,7 @@ console.log('Массив простых чисел: ');
 console.log(arrayOfSimple);
 console.log('Массив составных чисел: ');
 console.log(arrayOfComposite);
+
+
+// task 2
+
