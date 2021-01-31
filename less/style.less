@@ -1,0 +1,49 @@
+// out: ../style.css
+
+@width: 1140px;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: @width;
+}
+.padding-site {
+    padding: 15px 40px;
+    margin-bottom: 10px;
+}
+.header {
+    background-color: #c9e7f1;
+    
+}
+.task1, .task2, .task3, .task4, .task5, .task6, .task7, .task8 {
+    background-color: rgb(211, 255, 197);
+    .taskGrid {
+        display: grid;
+        grid-template-columns: 20% 10% 60%;
+        grid-column-gap: 10px;
+        p:nth-child(3n+4)::first-letter {
+            color: darkgray;
+        }
+    }
+    p {
+        margin: 5px 10px;
+    }
+    .headTable {
+        font-weight: 700;
+    }
+    
+}
+.task2, .task4, .task6, .task8 {
+    background-color: rgb(200, 240, 255);
+}
+.hightlighter {
+    background-color: rgb(241, 241, 241);
+    outline: 1px solid darkslategray;
+    padding: 10px 20px;
+}
