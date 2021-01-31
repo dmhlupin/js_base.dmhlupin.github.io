@@ -2,7 +2,7 @@
 
 // Task 1
 
-console.log ('===== Задание 1 =======');
+console.log('===== Задание 1 =======');
 
 //  =========  Простое решение с выводом в консоль ==============
 
@@ -26,8 +26,7 @@ console.log ('===== Задание 1 =======');
 //  Получим два массива с простыми и составными числами
 //  Для составных чисел получим массив с их делителями
 
-const arrayOfSimple = [];
-const arrayOfComposite = [];
+
 
 function isSimple(num) {
     const divs = [1];
@@ -47,7 +46,7 @@ function isSimple(num) {
     return divs;
 }
 
-function getNumbers(numStart, numEnd) {
+function getNumbers(arrayOfSimple, arrayOfComposite, numStart, numEnd) {
 
     while (numStart <= numEnd) {
         const arrOfDivs = isSimple(numStart);
@@ -61,16 +60,63 @@ function getNumbers(numStart, numEnd) {
     return true;
 }
 
-getNumbers(0, 100);
-console.log('Массив простых чисел: ');
-console.log(arrayOfSimple);
-console.log('Массив составных чисел: ');
-console.log(arrayOfComposite);
+function putToConsole() {
+    const arrayOfSimple = [];
+    const arrayOfComposite = [];
+    getNumbers(arrayOfSimple, arrayOfComposite, 0, 100);
+    console.log('Массив простых чисел: ');
+    console.log(arrayOfSimple);
+    console.log('Массив составных чисел: ');
+    console.log(arrayOfComposite);
+    return;
+}
+putToConsole();
+
+
+
+// Далее подключим этот функционал к html (это факультатив!)
+
+
+const range1 = document.getElementById("range");
+const calc1 = document.getElementById("calcFirstTask");
+const resultField = document.getElementById("result1");
+
+calc1.onclick = () => {
+    resultField.innerHTML = "";
+    if (+range1.value > 100) {
+        resultField.innerHTML = "Слишком большое число!";
+        return;
+    }
+
+    const arr1 = [];
+    const arr2 = [];
+    getNumbers(arr1, arr2, 0, +range1.value);
+    //  Вывод на страницу:
+    // Простые числа, формируем из массива строку через свертку
+    const stringOfSimple = document.createElement("p");
+    stringOfSimple.innerHTML = arr1.reduce((sum, current) => {
+        return `${sum} ${current}`
+    }, 'Простые числа: ');
+    resultField.appendChild(stringOfSimple);
+
+    // Составные числа. Здесь выводим каждое число в отдельную строку и в ней же его делители
+    const compositeTitle = document.createElement("p");
+    compositeTitle.innerHTML = "Составные числа:";
+    resultField.appendChild(compositeTitle);
+    arr2.forEach((value) => {
+        const stringOfDivs = document.createElement("p");
+        stringOfDivs.innerHTML = value[0] + ': его делители: ' + value[1].reduce((sum, current) => {
+            return `${sum} ${current}`
+        }, '');
+        resultField.appendChild(stringOfDivs);
+    });
+
+}
 
 
 // task 2
 
-console.log ('===== Задание 2 =======');
+console.log('===== Задание 2 =======');
 
 // Для товаров в корзине нам будет нужен двумерный массив
 // Каждый элемент в массиве корзины это один товар
@@ -118,23 +164,47 @@ console.log(cart);
 console.log(countBasketPrice(cart));
 
 // Task 3
-console.log ('===== Задание 3 =======');
-for(let i = 0; i < 10; console.log(i++)){};
+console.log('===== Задание 3 =======');
+for (let i = 0; i < 10; console.log(i++)) {};
 
 // Task 4
 
-console.log ('===== Задание 4 =======');
+console.log('===== Задание 4 =======');
 // Заполним массив
 
-const arr4 = [];
-for (let i = 0; i < 20; i++) {
-    arr4.push('x');
+function addX(count) {
+    const arr = [];
+    for (let i = 0; i < count; i++) {
+        arr.push('x');
+    }
+    console.log(arr);
+    return arr;
 }
-console.log(arr4);
+// Выведем пирамиду в консоль с помощью свертки
 
-// Выведем пирамидоу в консоль с помощью свертки
+function taskFourToConsole() {
+    const arr4 = addX(20);
+    arr4.reduce((sum, current) => {
+        console.log(sum);
+        return (sum + ' ' + current);
+    }, arr4[0]);
+}
 
-arr4.reduce((sum, current) => {
-            console.log(sum);
-            return(sum + ' ' + current);
-            }, arr4[0]);
+taskFourToConsole();
+// Выведем на страницу
+
+const range4 = document.getElementById("range4");
+const calc4 = document.getElementById("calcFourTask");
+const resultFieldFour = document.getElementById("result4");
+
+calc4.onclick = () => {
+    resultFieldFour.innerHTML = "";
+    if(+range4.value > 50) resultFieldFour.innerHTML = "Слишком большое число";
+    const arr4 = addX(+range4.value);
+    arr4.reduce((sum, current) => {
+        const str4 = document.createElement("p");
+        str4.innerHTML = sum;
+        resultFieldFour.appendChild(str4);
+        return (sum + ' ' + current);
+    }, arr4[0]);
+}
