@@ -201,7 +201,7 @@ const result3 = document.getElementById("result3");
 
 calc3.onclick = () => {
     result3.innerHTML = "";
-    for( let i = 0; i < 10; result3.innerHTML += (' ' + i++));
+    for( let i = 0; i < 10; result3.innerHTML += (' ' + i++)){};
 }
 
 // Task 4
