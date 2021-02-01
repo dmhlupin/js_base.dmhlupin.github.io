@@ -165,8 +165,28 @@ console.log(countBasketPrice(cart));
 
 // Вывод корзины на страницу
 
+const task2Result = document.getElementById("task2Result");
+const showBasket = document.getElementById("showBasket");
+const hideBasket = document.getElementById("hideBasket");
+hideBasket.onclick = () => {task2Result.innerHTML = ""};
+showBasket.onclick = () => {
+    cart.forEach((value) => {
+        const p1 = document.createElement("p");
+        const p2 = document.createElement("p");
+        const p3 = document.createElement("p");
 
-
+        p1.innerHTML = value[0];
+        p2.innerHTML = value[1];
+        p3.innerHTML = value[2];
+        task2Result.appendChild(p1);
+        task2Result.appendChild(p2);
+        task2Result.appendChild(p3);
+    });
+    const sum2 = document.createElement("p");
+    sum2.innerHTML = "Стоимость товаров: " + countBasketPrice(cart);
+    task2Result.appendChild(sum2);
+    
+}
 
 
 // Task 3
@@ -205,7 +225,7 @@ const resultFieldFour = document.getElementById("result4");
 
 calc4.onclick = () => {
     resultFieldFour.innerHTML = "";
-    if(+range4.value > 50) resultFieldFour.innerHTML = "Слишком большое число";
+    if (+range4.value > 50) resultFieldFour.innerHTML = "Слишком большое число";
     const arr4 = addX(+range4.value);
     arr4.reduce((sum, current) => {
         const str4 = document.createElement("p");
