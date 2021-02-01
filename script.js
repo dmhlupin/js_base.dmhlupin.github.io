@@ -154,13 +154,13 @@ function countBasketPrice(cart) {
     }
 }
 
-console.log(countBasketPrice(cart));
 
-addToCart(['носки', 10, 1]);
-addToCart(['носки', 10, 3]);
-addToCart(['Рубашка', 50, 2]);
-addToCart(['Юбка', 30, 4]);
-console.log(cart);
+
+addToCart(['носки', 10, 1]); // Добавим одну пару носков
+addToCart(['носки', 10, 3]);    // Добавим ище носков
+addToCart(['Рубашка', 50, 2]);  // Добавим рубашку
+addToCart(['Юбка', 30, 4]);     // Добавим юбку
+console.log(cart);              
 console.log(countBasketPrice(cart));
 
 // Вывод корзины на страницу
@@ -170,6 +170,7 @@ const showBasket = document.getElementById("showBasket");
 const hideBasket = document.getElementById("hideBasket");
 hideBasket.onclick = () => {task2Result.innerHTML = ""};
 showBasket.onclick = () => {
+    task2Result.innerHTML = "";
     cart.forEach((value) => {
         const p1 = document.createElement("p");
         const p2 = document.createElement("p");
@@ -219,7 +220,7 @@ function addX(count) {
 // Выведем пирамиду в консоль с помощью свертки
 
 function taskFourToConsole() {
-    const arr4 = addX(20);
+    const arr4 = addX(20); // addX заполняет массив 20ю иксами
     arr4.reduce((sum, current) => {
         console.log(sum);
         return (sum + ' ' + current);
