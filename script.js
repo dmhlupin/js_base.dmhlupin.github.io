@@ -163,6 +163,12 @@ addToCart(['Юбка', 30, 4]);
 console.log(cart);
 console.log(countBasketPrice(cart));
 
+// Вывод корзины на страницу
+
+
+
+
+
 // Task 3
 console.log('===== Задание 3 =======');
 for (let i = 0; i < 10; console.log(i++)) {};
