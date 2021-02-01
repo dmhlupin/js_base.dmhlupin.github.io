@@ -193,6 +193,16 @@ showBasket.onclick = () => {
 console.log('===== Задание 3 =======');
 for (let i = 0; i < 10; console.log(i++)) {};
 
+// На страницу
+
+const calc3 = document.getElementById("calc3");
+const result3 = document.getElementById("result3");
+
+calc3.onclick = () => {
+    result3.innerHTML = "";
+    for( let i = 0; i < 10; result3.innerHTML += (' ' + i++));
+}
+
 // Task 4
 
 console.log('===== Задание 4 =======');
