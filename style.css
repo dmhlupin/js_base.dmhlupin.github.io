@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 1140px;
+}
+.padding-site {
+  padding: 15px 40px;
+  margin-bottom: 10px;
+}
+.header {
+  background-color: #c9e7f1;
+}
+.task1,
+.task2,
+.task3,
+.task4,
+.task5,
+.task6,
+.task7,
+.task8 {
+  background-color: #d3ffc5;
+}
+.task1 .taskGrid,
+.task2 .taskGrid,
+.task3 .taskGrid,
+.task4 .taskGrid,
+.task5 .taskGrid,
+.task6 .taskGrid,
+.task7 .taskGrid,
+.task8 .taskGrid {
+  display: grid;
+  grid-template-columns: 20% 10% 60%;
+  grid-column-gap: 10px;
+}
+.task1 .taskGrid p:nth-child(3n+4)::first-letter,
+.task2 .taskGrid p:nth-child(3n+4)::first-letter,
+.task3 .taskGrid p:nth-child(3n+4)::first-letter,
+.task4 .taskGrid p:nth-child(3n+4)::first-letter,
+.task5 .taskGrid p:nth-child(3n+4)::first-letter,
+.task6 .taskGrid p:nth-child(3n+4)::first-letter,
+.task7 .taskGrid p:nth-child(3n+4)::first-letter,
+.task8 .taskGrid p:nth-child(3n+4)::first-letter {
+  color: darkgray;
+}
+.task1 p,
+.task2 p,
+.task3 p,
+.task4 p,
+.task5 p,
+.task6 p,
+.task7 p,
+.task8 p {
+  margin: 5px 10px;
+}
+.task1 .headTable,
+.task2 .headTable,
+.task3 .headTable,
+.task4 .headTable,
+.task5 .headTable,
+.task6 .headTable,
+.task7 .headTable,
+.task8 .headTable {
+  font-weight: 700;
+}
+.task2,
+.task4,
+.task6,
+.task8 {
+  background-color: #c8f0ff;
+}
+.hightlighter {
+  background-color: #f1f1f1;
+  outline: 1px solid darkslategray;
+  padding: 10px 20px;
+}
