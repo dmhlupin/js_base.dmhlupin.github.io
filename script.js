@@ -19,6 +19,26 @@ console.log(rankNumber(12));
 const input1 = document.getElementById("range");
 const calc1 = document.getElementById("calcFirstTask");
 const res1 = document.getElementById("res1");
+const resultObject = rankNumber(+input1.value);
+
+
+const hundreds = document.createElement("p");
+const tens = document.createElement("p");
+const units = document.createElement("p");
+
+
+
+
+// const compositeTitle = document.createElement("p");
+// compositeTitle.innerHTML = "Составные числа:";
+// resultField.appendChild(compositeTitle);
+// arr2.forEach((value) => {
+//     const stringOfDivs = document.createElement("p");
+//     stringOfDivs.innerHTML = value[0] + ': его делители: ' + value[1].reduce((sum, current) => {
+//         return `${sum} ${current}`
+//     }, '');
+//     resultField.appendChild(stringOfDivs);
+// });
 
 
 
