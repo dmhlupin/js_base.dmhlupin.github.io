@@ -55,6 +55,7 @@ body {
 .task7 .headTable,
 .task8 .headTable {
   font-weight: 700;
+  margin-bottom: 10px;
 }
 .task2,
 .task4,
