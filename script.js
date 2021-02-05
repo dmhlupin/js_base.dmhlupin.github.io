@@ -136,7 +136,7 @@ console.log(cart.removeFromCart(product3, 2));
 console.log(cart.showCart());
 console.log(`В корзине товаров на ${cart.getCartPrice()} рублей`);
 
-
+// вывод на страницу
 const task2Result = document.getElementById("task2Result");
 const showBasket = document.getElementById("showBasket");
 const hideBasket = document.getElementById("hideBasket");
