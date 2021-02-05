@@ -27,9 +27,9 @@ calc1.onclick = () => {
     const tens = document.createElement("p");
     const units = document.createElement("p");
     const resultObject = rankNumber(+input1.value);
-    hundreds.innerHTML = `"rank 100": ${resultObject['rank 100']}`;
-    tens.innerHTML = `"rank 10": ${resultObject['rank 10']}`;
-    units.innerHTML = `"rank 1": ${resultObject['rank 1']}`;
+    hundreds.innerHTML = `rank 100: ${resultObject['rank 100']}`;
+    tens.innerHTML = `rank 10: ${resultObject['rank 10']}`;
+    units.innerHTML = `rank 1: ${resultObject['rank 1']}`;
     res1.appendChild(hundreds);
     res1.appendChild(tens);
     res1.appendChild(units);
