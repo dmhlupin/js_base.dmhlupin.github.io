@@ -135,3 +135,29 @@ console.log(`В корзине товаров на ${cart.getCartPrice()} руб
 console.log(cart.removeFromCart(product3, 2));
 console.log(cart.showCart());
 console.log(`В корзине товаров на ${cart.getCartPrice()} рублей`);
+
+
+const task2Result = document.getElementById("task2Result");
+const showBasket = document.getElementById("showBasket");
+const hideBasket = document.getElementById("hideBasket");
+hideBasket.onclick = () => {task2Result.innerHTML = ""};
+showBasket.onclick = () => {
+    task2Result.innerHTML = "";
+    for(let item in cart.goods) {
+        const p1 = document.createElement("p");
+        const p2 = document.createElement("p");
+        const p3 = document.createElement("p");
+        p1.innerHTML = cart.goods[item].product.name;
+        p2.innerHTML = cart.goods[item].product.price;
+        p3.innerHTML = cart.goods[item].quantity;
+        task2Result.appendChild(p1);
+        task2Result.appendChild(p2);
+        task2Result.appendChild(p3);
+    }
+
+    
+    const sum2 = document.createElement("p");
+    sum2.innerHTML = "Стоимость товаров: " + cart.getCartPrice();
+    task2Result.appendChild(sum2);
+    
+}
