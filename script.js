@@ -140,10 +140,12 @@ console.log(`В корзине товаров на ${cart.getCartPrice()} руб
 const task2Result = document.getElementById("task2Result");
 const showBasket = document.getElementById("showBasket");
 const hideBasket = document.getElementById("hideBasket");
-hideBasket.onclick = () => {task2Result.innerHTML = ""};
+hideBasket.onclick = () => {
+    task2Result.innerHTML = ""
+};
 showBasket.onclick = () => {
     task2Result.innerHTML = "";
-    for(let item in cart.goods) {
+    for (let item in cart.goods) {
         const p1 = document.createElement("p");
         const p2 = document.createElement("p");
         const p3 = document.createElement("p");
@@ -155,9 +157,8 @@ showBasket.onclick = () => {
         task2Result.appendChild(p3);
     }
 
-    
+
     const sum2 = document.createElement("p");
     sum2.innerHTML = "Стоимость товаров: " + cart.getCartPrice();
     task2Result.appendChild(sum2);
-    
 }
