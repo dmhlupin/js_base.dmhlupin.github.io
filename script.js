@@ -14,6 +14,14 @@ function rankNumber (val) {
 console.log(`Task 1 Число 12:`); 
 console.log(rankNumber(12));
 
+// Вывод на страницу
+
+const input1 = document.getElementById("range");
+const calc1 = document.getElementById("calcFirstTask");
+const res1 = document.getElementById("res1");
+
+
+
 // Task 2
 
 // Реализация:
