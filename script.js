@@ -122,7 +122,7 @@ Cart.prototype.getCartPrice = function () {
 }
 
 
-const cart = new Cart;
+const cart = new Cart();
 
 
 
