@@ -36,16 +36,6 @@ body {
   grid-template-columns: 20% 10% 60%;
   grid-column-gap: 10px;
 }
-.task1 .taskGrid p:nth-child(3n+4)::first-letter,
-.task2 .taskGrid p:nth-child(3n+4)::first-letter,
-.task3 .taskGrid p:nth-child(3n+4)::first-letter,
-.task4 .taskGrid p:nth-child(3n+4)::first-letter,
-.task5 .taskGrid p:nth-child(3n+4)::first-letter,
-.task6 .taskGrid p:nth-child(3n+4)::first-letter,
-.task7 .taskGrid p:nth-child(3n+4)::first-letter,
-.task8 .taskGrid p:nth-child(3n+4)::first-letter {
-  color: darkgray;
-}
 .task1 p,
 .task2 p,
 .task3 p,
