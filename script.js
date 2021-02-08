@@ -1,28 +1,29 @@
-"use strict"
+function generateChess() {
+    const result = document.getElementById("result");
+    const str = "ABCDEFGH";
+    for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j <= 10; j++) {
+            const cell = document.createElement("div");
+            cell.setAttribute("class", "cell");
+            
+            if ((i === 1) || (i === 10)) {
+                if ((j > 1) && (j < 10)) {
+                    cell.innerHTML = str[j - 2];
+                }
+            } else if ((j === 1) || (j === 10)) {
+                cell.innerHTML = (10 - i);
+            } else {
+                cell.style.opacity = "50%";
+                if (((i % 2 === 0) && (j % 2 === 0)) || ((i % 2 === 1) && (j % 2 === 1))) {
+                    cell.style.backgroundColor = "#ffffff";
+                } else {
+                    cell.style.backgroundColor = "#000000";
+                }
+            }
+            result.appendChild(cell);
+        }
+    }
+}
+generateChess();
 
-// Первое задание
-const tempC = 20;
-
-const tempF = (9/5)*tempC + 32;
-
-alert(`Задание 1: ${tempC} градусов Цельсия - это ${tempF} градусов по Фаренгейту`);
-
-// Второе задание
-
-
-let admin;
-let name = "Василий";
-
-admin = name;
-alert(`Задание 2: ${admin}`);
-
-// третье задание
-
-const concat = 1000 + "108";
-
-alert(`Задание 3: 1000 + "108" = ${concat} так как при сложении строки и числа происходит конкатенация. Тип результата = ${typeof(concat)}`);
-
-// Четвертое задание
-
-alert("Задание 4: атрибут async загружает скрипт асинхронно, т.е. его загрузка не зависит от загрузки страницы или других скриптов и наоборот.");
-alert("Задание 4: атрибут defer позволяет браузеру загружать скрипт в фоновом режиме, и запускать его когда он загрузится. Не блокирует загрузку страницы.");
+// Task 2 Dynamic cart

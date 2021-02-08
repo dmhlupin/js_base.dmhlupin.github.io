@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-   <script async defer type="text/javascript" src="script.js"></script>
-   <h1>Домашнее задание 1</h1>
-   <p>Задание 1: tempC = 20 градусов по цельсию </p> 
-   <p>Остальные задания ДЗ без вводных данных. Вывод в alertы</p>
-   <p>PS: async и defer применены к скрипту на данной странице.</p>
+    <header class="padding-site">
+        <h1>Домашняя работа #5</h1>
+    </header>
+    <section class="padding-site task1">
+
+
+        <h3>Задание 1: Создать функцию, генерирующую шахматную доску. Можно использовать любые html-теги. Доска должна
+            быть верно разлинована на черные и белые ячейки. Строки должны нумероваться числами от 1 до 8, столбцы —
+            латинскими буквами A, B, C, D, E, F, G, H.</h3>
+
+        <div id="result"></div>
+    </section>
+    <section class="padding-site task2">
+        <h3>Задание 2: Сделать генерацию корзины динамической: верстка корзины не должна находиться в HTML-структуре.
+            Там должен быть только div, в который будет вставляться корзина, сгенерированная на базе JS:</h3>
+        <p> Пустая корзина должна выводить строку «Корзина пуста»;</p>
+        <p> Наполненная должна выводить «В корзине: n товаров на сумму m рублей».</p>
+        <div class="gridContainer">
+            
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
