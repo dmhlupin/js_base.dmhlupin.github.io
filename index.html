@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-   <script async defer type="text/javascript" src="script.js"></script>
-   <h1>Домашнее задание 1</h1>
-   <p>Задание 1: tempC = 20 градусов по цельсию </p> 
-   <p>Остальные задания ДЗ без вводных данных. Вывод в alertы</p>
-   <p>PS: async и defer применены к скрипту на данной странице.</p>
+    <header class="padding-site">
+        <h1>Домашняя работа #6</h1>
+    </header>
+
+    <section class="padding-site task1">
+        <h3>Задание 1: Продолжаем реализовывать модуль корзины </h3>
+            <p> Добавлять в объект корзины выбранные товары по клику на кнопке «Купить» без перезагрузки страницы;</p>
+           <p> Привязать к событию покупки товара пересчет корзины и обновление ее внешнего вида.</p>
+        
+        
+        <div class="gridContainer">
+            <p>Товары:</p>
+            <p>Корзина:</p>
+            <div id="productSection"></div>
+            <div id="cartSection"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
