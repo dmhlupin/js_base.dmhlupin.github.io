@@ -17,9 +17,9 @@ class Slider {
 
         this.sliderContainer.classList.add("sliderContainer");
         this.leftArrow.classList.add('fas', 'fa-chevron-circle-left', 'fa-2x','leftArrow');
-        this.leftArrow.onclick = () => {this.setNextLeftImage()};
+        this.leftArrow.addEventListener("click", () => {this.setNextLeftImage()});
         this.rightArrow.classList.add('fas', 'fa-chevron-circle-right','fa-2x','rightArrow');
-        this.rightArrow.onclick = () => {this.setNextRightImage()};
+        this.rightArrow.addEventListener("click", () => {this.setNextRightImage()});
        
         this.imgContainer.classList.add("imgContainer");
         this.createImageBlocks();
