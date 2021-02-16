@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 6</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 6</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    </head>
 <body>
     <header class="padding-site">
         <h1>Домашняя работа #6</h1>
     </header>
-
     <section class="padding-site task1">
-        <h3>Задание 1: Продолжаем реализовывать модуль корзины </h3>
-            <p> Добавлять в объект корзины выбранные товары по клику на кнопке «Купить» без перезагрузки страницы;</p>
-           <p> Привязать к событию покупки товара пересчет корзины и обновление ее внешнего вида.</p>
-        
-        
-        <div class="gridContainer">
-            <p>Товары:</p>
-            <p>Корзина:</p>
-            <div id="productSection"></div>
-            <div id="cartSection"></div>
-        </div>
+        <div id="productBlock"></div>
+        <div id="cartBlock"></div>
     </section>
-
-    <script src="script.js"></script>
+    
+    <script src="slider.js"></script>
+    <script src="product.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>
