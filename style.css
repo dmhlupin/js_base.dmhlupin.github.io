@@ -3,17 +3,9 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.task1 {
-    background-color: rgb(255, 255, 255);
-}
-
-.task2 {
-    background-color: #d4d1d1;
-}
-
 .padding-site {
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 55%;
 
     min-height: auto;
     padding: 20px 50px 40px;
@@ -63,7 +55,7 @@ body {
 }
 
 #productBlock {
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(212, 212, 212);
     padding: 20px;
     margin-bottom: 50px;
 }
@@ -82,7 +74,7 @@ body {
 }
 
 #cartBlock {
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(211, 211, 211);
     padding: 10px;
 }
 
@@ -93,6 +85,7 @@ body {
     
     padding: 20px;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
 
@@ -129,6 +122,37 @@ body {
     height: 2em;
 }
 
-.removeButton:hover, .toCartButton:hover {
+.removeButton:hover, .toCartButton:hover, .nextButton:hover  {
     cursor: pointer;
+    box-shadow: 0 3px 5px rgba(189, 135, 111, .5);
+}
+.removeButton:active, .toCartButton:active, .nextButton:active {
+    background-color: rgb(204, 106, 60);
+    box-shadow: none;
+}
+
+.nextButton {
+    background-color: sienna;
+    color: whitesmoke;
+    width: 100px;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    margin-left: 85%;
+    
+}
+
+.addressBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.addressBlock input {
+    margin: 10px 0;
+    max-width: 30%;
+}
+
+.commentsBlock textarea {
+    width: 50%;
+    min-height: 200px ;
 }
