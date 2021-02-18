@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.task1 {
+    background-color: rgb(255, 255, 255);
+}
+
+.task2 {
+    background-color: #d4d1d1;
+}
+
+.padding-site {
+    margin: 0 auto;
+    max-width: 50%;
+
+    min-height: auto;
+    padding: 20px 50px 40px;
+    text-align: justify;
+}
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.imgContainer {
+    flex-grow: 1;
+    margin: 10px 10px;
+}
+
+.imgBlock {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.imgBlock>img {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.img-hidden {
+    display: none;
+}
+
+.itemProductList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftArrow,
+.rightArrow {
+    color: rgb(180, 180, 180);
+    font-size: 16px;
+}
+.leftArrow:hover,
+.rightArrow:hover {
+    cursor: pointer;
+}
+
+#productBlock {
+    background-color: rgb(222, 222, 222);
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#productBlock .itemProductList {
+    background-color: whitesmoke;
+    margin: 10px 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.descDiv {
+    flex-grow: 1;
+    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 1px solid rgb(212, 212, 212);
+}
+
+#cartBlock {
+    background-color: rgb(222, 222, 222);
+    padding: 10px;
+}
+
+.totalCart {
+    margin: 10px 0;
+}
+#cartBlock .cartContainer {
+    
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+#cartBlock .sliderContainer {
+    width: 200px;
+}
+
+#cartBlock .imgBlock {
+    height: 100px;
+}
+
+#cartBlock .itemCartList {
+    background-color: rgb(243, 243, 243);
+    font-size: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.totalCart {
+    flex-grow: 1
+}
+
+.removeButton, .toCartButton {
+    background-color: sienna;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 2em;
+    height: 2em;
+}
+
+.removeButton:hover, .toCartButton:hover {
+    cursor: pointer;
+}
